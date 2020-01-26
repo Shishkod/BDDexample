@@ -109,7 +109,7 @@ public class MainSteps {
     }
 
     private void checkErrorCode(String mistake, Integer errorCode) {
-        Boolean found = false;
+        boolean found = false;
         for (ResponseBody spellResult : response) {
             if (spellResult.word.equalsIgnoreCase(mistake) && (spellResult.code.equals(errorCode))) {
                 found = true;
@@ -123,7 +123,7 @@ public class MainSteps {
         if (!queryParam.containsKey(OPTIONS_PARAMETER)) {
             queryParam.put(OPTIONS_PARAMETER, parameterValue);
         } else {
-            queryParam.put(OPTIONS_PARAMETER, (Integer) queryParam.get(OPTIONS_PARAMETER) + parameterValue);
+            queryParam.put(OPTIONS_PARAMETER, (Integer)queryParam.get(OPTIONS_PARAMETER) + parameterValue);
         }
     }
 
